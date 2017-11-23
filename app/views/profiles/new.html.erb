@@ -1,4 +1,13 @@
-<label for="email">email</label>
+<% profiles = [:email, :username, :pin, :website, :address, :alias] %>
+
+<% profiles.each do |attrib|%>
+ 	<%= label_tag(attrib)%>
+ 		<%= text_field_tag(attrib)%>
+ <% end %>
+
+<%= submit_tag("Do it") %>
+
+<!-- <label for="email">email</label>
 <input type="text" name="email" id="email" class="fancy_form" >
 
 <label for="username">username</label>
@@ -14,4 +23,4 @@
 <input type="text" name="address" id="address" class="fancy_form" >
 
 <label for="alias">alias</label>
-<input type="text" name="alias" id="alias" class="fancy_form" >
+<input type="text" name="alias" id="alias" class="fancy_form" > -->
